@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quick Need – Local Services On Demand</title>
+  <style>
+    :root{--bg:#fff;--fg:#111;--muted:#555;--accent:#007bff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--fg);background:var(--bg)}
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:#f9f9f9;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+    .brand{font-weight:bold;font-size:20px;color:var(--accent)}
+    nav a{margin-left:16px;text-decoration:none;color:var(--fg);font-weight:600}
+    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;background:#eef6ff;text-align:center}
+    .hero h1{font-size:36px;margin:0;color:var(--accent)}
+    .hero p{max-width:600px;color:var(--muted)}
+    .btn{display:inline-block;padding:12px 18px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin-top:14px;cursor:pointer;text-align:center}
+    .container{max-width:1100px;margin:0 auto;padding:40px 20px}
+    h2{margin-top:0;color:var(--accent)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:20px}
+    .card{border:1px solid #ddd;border-radius:10px;padding:16px;text-align:center;background:#fff;transition:transform .2s}
+    .card:hover{transform:translateY(-4px);}
+    .card img{width:60px;height:60px;object-fit:contain;margin-bottom:12px}
+    .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;text-align:center;margin-top:20px}
+    .how div{background:#f9f9f9;border-radius:10px;padding:20px}
+    footer{padding:20px;background:#111;color:#fff;text-align:center;margin-top:40px}
+    .contact-form{display:flex;flex-direction:column;max-width:400px;margin:auto}
+    .contact-form input,.contact-form textarea{margin-bottom:12px;padding:10px;border:1px solid #ccc;border-radius:6px}
+    .contact-form button{background:var(--accent);color:#fff;border:none;padding:12px;border-radius:6px;font-weight:600;cursor:pointer}
+
+    /* 📱 Mobile Optimization */
+    @media (max-width: 768px) {
+      header {flex-direction: column; text-align: center;}
+      nav {margin-top: 10px;}
+      nav a {display: block; margin: 6px 0;}
+      .hero h1 {font-size: 28px;}
+      .hero p {font-size: 16px;}
+      .btn {width: 100%;}
+      .grid {grid-template-columns: 1fr;}
+      .how {grid-template-columns: 1fr;}
+      .container {padding: 20px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Quick Need</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Local Services, One Tap Away</h1>
+    <p>Find trusted electricians, tutors, plumbers, cleaners, internet, cable TV, and more in your area. Quick booking, verified providers, easy payments.</p>
+    <a href="#services" class="btn">Book a Service</a>
+  </section>
+
+  <main class="container">
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card"><img src="https://img.icons8.com/ios-filled/100/electrical.png" alt="Electrician"><h3>Electricians</h3><p>Switches, fans, wiring, lights & appliance repairs.</p><a href="#" class="btn" data-service="Electrician">Book via WhatsApp</a></div>
+        <div class="card"><img src="https://img.icons8.com/ios-filled/100/classroom.png" alt="Tutor"><h3>Tutors</h3><p>Home & online tuition.</p><a href="#" class="btn" data-service="Tutor">Book via WhatsApp</a></div>
+        <div class="card"><img src="https://img.icons8.com/ios-filled/100/plumber.png" alt="Plumber"><h3>Plumbers</h3><p>Leak repairs, fittings, bathroom fixes.</p><a href="#" class="btn" data-service="Plumber">Book via WhatsApp</a></div>
+        <div class="card"><img src="https://img.icons8.com/ios-filled/100/broom.png" alt="Cleaner"><h3>Cleaners</h3><p>Home & office cleaning.</p><a href="#" class="btn" data-service="Cleaning Service">Book via WhatsApp</a></div>
+        <div class="card"><img src="https://img.icons8.com/ios-filled/100/wifi.png" alt="Internet"><h3>Internet Services</h3><p>Broadband, fibre & Wi-Fi setup (local ISPs).</p><a href="#" class="btn" data-service="Internet Service">Book via WhatsApp</a></div>
+        <div class="card"><img src="https://img.icons8.com/ios-filled/100/cable--v1.png" alt="Cable TV"><h3>Cable TV</h3><p>Installation, HD packages & repairs.</p><a href="#" class="btn" data-service="Cable TV">Book via WhatsApp</a></div>
+        <div class="card"><img src="https://img.icons8.com/ios-filled/100/air-conditioner.png" alt="AC Repair"><h3>AC Repair</h3><p>AC service, gas refill & repair at home.</p><a href="#" class="btn" data-service="AC Repair">Book via WhatsApp</a></div>
+        <div class="card"><img src="https://img.icons8.com/ios-filled/100/truck.png" alt="Transport"><h3>Transport & Movers</h3><p>Local shifting, packers & movers.</p><a href="#" class="btn" data-service="Transport or Moving Service">Book via WhatsApp</a></div>
+      </div>
+    </section>
+
+    <section id="how" style="margin-top:40px">
+      <h2>How It Works</h2>
+      <div class="how">
+        <div><h3>1. Choose</h3><p>Browse and pick the service you need.</p></div>
+        <div><h3>2. Book</h3><p>Instant booking via WhatsApp or call.</p></div>
+        <div><h3>3. Get Service</h3><p>Verified provider reaches your doorstep.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:40px">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align:center;margin-top:12px;color:var(--muted)">Or reach us at: 
+        <a href="mailto:info@quickneed.com">info@quickneed.com</a> | 
+        <a href="tel:+918121454316">+91 81214 54316</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Quick Need • Follow us on 
+      <a href="https://instagram.com/quickneed" target="_blank" style="color:#fff;text-decoration:underline">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    const whatsappNumber = "918121454316";
+    document.querySelectorAll('.btn[data-service]').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        let service = this.dataset.service;
+        let message = `Hello, I need ${service} service.`;
+        let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+      });
+    });
+  </script>
+</body>
+</html>
